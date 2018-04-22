@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 5
+        versionName "1.1.2"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+ext{
+    //google
+    gspVersion = '15.0.0'
+
+    //Gson
+    gsonVersion = '2.8.2'
+
+    //facebook
+    facebookVersion = '4.+'
+}
+
+dependencies {
+    //implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //OkHttp
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    //Logging
+    compile 'com.jakewharton.timber:timber:4.5.1'
+    //GSON
+    compile "com.google.code.gson:gson:$gsonVersion"
+    //RxAndroid
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.6'
+    //Admob|ADX|DFP
+    compile "com.google.android.gms:play-services-ads:$gspVersion"
+    compile 'com.google.ads.mediation:facebook:4.27.1.0'
+    //Facebook audience
+    compile "com.facebook.android:audience-network-sdk:$facebookVersion"
+    //Appbid SDK
+    compile files('libs/appbid-sdk.jar')
+}
