@@ -199,10 +199,6 @@ If you are using Proguard add the following to your Proguard config file:
 # Admob
 -keep class com.google.android.gms.ads.** { *; }
 
-# Tapjoy
--keep class com.tapjoy.** { *; }
--dontwarn com.tapjoy.**
-
 # IronSource
 -keepclassmembers class com.ironsource.sdk.controller.IronSourceWebView$JSInterface { public *; }
 -keepclassmembers class * implements android.os.Parcelable { public static final android.os.Parcelable$Creator *; }
