@@ -27,23 +27,6 @@ Add AppBid library to your project(File->New->Import module):
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!--optional-->
 ```
 
-Add the following under application tag:
-
-```
-<!-- MoPub -->
-<activity android:name="com.mopub.mobileads.MoPubActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-<activity android:name="com.mopub.mobileads.MraidActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-<activity android:name="com.mopub.common.MoPubBrowser" android:configChanges="keyboardHidden|orientation|screenSize"/>
-<activity android:name="com.mopub.mobileads.MraidVideoPlayerActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-<activity android:name="com.mopub.mobileads.RewardedMraidActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-
-<!-- Flurry Advertising -->
-<activity
-    android:name="com.flurry.android.FlurryFullscreenTakeoverActivity"
-    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-```
-
-
 ## SDK Integration
 To initialize SDK, you need to add the following code in onCreate method of your main activity:
 
